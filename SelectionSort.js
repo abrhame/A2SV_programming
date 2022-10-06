@@ -1,4 +1,4 @@
-  selectionSort(arr,n){
+ function selectionSort(arr,n){
    //code here
     for(let i =0; i<n;i++){
         for(let j = i+1; j< n; j++){
