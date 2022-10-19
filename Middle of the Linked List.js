@@ -7,3 +7,31 @@ var middleNode = function(head) {
     }
     return p1;
 };
+
+
+/// another fastest(optimized) solution
+
+var middleNode1 = function(head) {
+	let currentNode = head; 
+    let index = 0; //becomes the length of the linked list
+    while(currentNode){
+        index++;
+        currentNode = currentNode.next; 
+    } //O(n)
+    
+    let halfIndex; 
+    if( index % 2 !== 0 ) {
+        halfIndex = (index-1) / 2; 
+    } else {
+        halfIndex = index / 2; 
+    } //O(1); 
+    
+    currentNode = head; 
+    let newIndex = 0; 
+    while(newIndex < halfIndex){
+        currentNode = currentNode.next; 
+        newIndex++
+    } //O(n); 
+    return currentNode; 
+};
+
