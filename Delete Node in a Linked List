@@ -1,0 +1,5 @@
+var deleteNode = function(node) {
+    // make the current node value the next value of the node
+    node.val = node.next.val
+    node.next = node.next.next
+};
