@@ -8,6 +8,6 @@ class Solution:
                 for i in range(len(sub)):
                     ans[".".join(sub[i:])] += count
                     
-            return ["{} {}".format(ct, dom) for dom, ct in ans.items()]
+            return ["{} {}".format(com,dom) for dom,com in ans.items()]
 
                     
