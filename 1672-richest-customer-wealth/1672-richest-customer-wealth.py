@@ -5,5 +5,7 @@ class Solution:
             total = 0
             for wealth in customer:
                 total += wealth
-            richest = max(richest, total)
+            if total > richest:
+                richest = total
         return richest
+        
