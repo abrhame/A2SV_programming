@@ -16,8 +16,6 @@ class Solution:
         # return ans    
         
         ans = []
-        recent = []
-        recent.append(pref[0])
         ans.append(pref[0])
         for i in range(1, len(pref)):
             tmp = pref[i]^pref[i-1]
