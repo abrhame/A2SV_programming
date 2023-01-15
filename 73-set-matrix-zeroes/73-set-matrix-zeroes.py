@@ -3,6 +3,7 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
+        
         zeros = []
         for i in range(len(matrix)):
             for j in range(len(matrix[0])):
@@ -18,4 +19,4 @@ class Solution:
             for j in range(len(matrix)):     # set all the row values to zero
                 matrix[j][zeros[i][1]] = 0
         
-        return matrix
+        
