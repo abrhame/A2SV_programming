@@ -1,6 +1,8 @@
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
+        # check every row and column
         for i in range(0, len(board)):
+            # set1 validates the rows and set2 validates the columns
             set1 = set()
             set2 = set()
             for j in range(0, len(board[0])):
@@ -13,6 +15,7 @@ class Solution:
                 elif board[j][i] != ".":
                     set2.add(board[j][i])
                     
+        #check all the submatrix found in the matrxi         
         for row in range(0,len(board), 3):
             for col in range(0, len(board[0]),3):
                 set1 = set()
