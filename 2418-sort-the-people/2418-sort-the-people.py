@@ -12,8 +12,8 @@ class Solution:
         # return names
         
         for i in range(len(names)):
-            for j in range(len(names)):
-                if heights[i] >= heights[j]:
+            for j in range(i,len(names)):
+                if heights[i] <= heights[j]:
                     heights[i],heights[j] = heights[j],heights[i]
                     names[i], names[j] = names[j], names[i]
         return names
