@@ -14,13 +14,13 @@ class Solution:
                 flag = True # if the array start to decrease intialize the flag to True
                 idx = i+1   # index of the array that it starts to decreas strictly
                 break
-            elif i+1 == (len(arr) - 1):
+            elif i+1 == (len(arr) - 1):     # check for all arrays are not strictly increasing
                 return False
         if flag == True:    # if the flag  is true, check for strictly decreasing
             for i in range(idx,len(arr)-1):
                 if arr[i] <= arr[i + 1]:
                     return False
-                elif idx == 1 and i+1 == (len(arr) - 1):
+                elif idx == 1 and i+1 == (len(arr) - 1):      # check for all arrays are not strictly decreasing
                     return False
         return True
                 
