@@ -13,16 +13,21 @@ for i in range(m):
     for j in range(n):
         col.append(mat[j][i])
     column.append(col)
+    
 # iterate for each elemetn and check for they are not repeated in row wise and column wise.   
 for i in range(n):
     for j in range(m):
+        
         # if there element is repeated more than once in the row. jump it
         if mat[i].count(mat[i][j]) > 1:
             continue
+            
         # if the elemnt is repeated more than once in the column. jump it
         if column[j].count(mat[i][j]) > 1:
             continue
+            
         # if the element is not repeated in the row and column wise it is not crossed out.
         else:
             ans.append(mat[i][j])
+            
 print("".join(ans))
