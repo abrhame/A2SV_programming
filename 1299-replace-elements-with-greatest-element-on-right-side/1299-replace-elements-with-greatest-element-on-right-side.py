@@ -10,8 +10,7 @@ class Solution:
                 ind = arr.index(max_)   # find the index of the maximum elemnt
                 arr[i] = max_
         # make the last element -1
-        arr.pop()
-        arr.append(-1)
+        arr[-1] = -1
         return arr
 
         
