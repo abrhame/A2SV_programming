@@ -10,6 +10,8 @@ class Solution:
 #                 left += 1
 #             else:
 #                 right -= 1
+
+# *** Method 2 ***
             comp = set()
             for i in range(len(numbers)):
                 diff = target - numbers[i]
@@ -18,5 +20,17 @@ class Solution:
                     return [ind+1,i+1]
                 else:
                     comp.add(numbers[i])
+            
+        #*** Method 3 ****
+        
+            #         # comp = set()
+            # for i in range(len(numbers)):
+            #     diff = target - numbers[i]
+            #     if diff in comp:
+            #         ind = numbers.index(diff)
+            #         return [ind+1,i+1]
+            #     else:
+            #         comp.add(numbers[i])
+            
             
     
