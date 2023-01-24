@@ -4,41 +4,17 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         
         """
+        # two pointer(seeker and holder)
+        p1 = 0          # this is the holder index. which holds the the postion of the zero
+        p2 = 0      # this is the seeker. which holds the postion of the non zero variable
         
-        p1 = 0
-        p2 = 0
         
-        
-        while p2 < len(nums):
+        while p2 < len(nums):      
+            # if there is a non zero element, swap it with the zeros element
             if nums[p2] != 0:
                 nums[p1], nums[p2] = nums[p2], nums[p1]
                 p1 +=1
             p2+=1
-        
-        
-        
-#         p2 = 1
-        
-#         while p2 < len(nums) and p1<len(nums):
-#             if nums[p1] != 0:
-#                 p1 += 1
-#             elif nums[p2] == 0:
-#                 p2+=1
-#             elif nums[p2] != 0 and nums[p1] == 0:
-#                 nums[p1], nums[p2] = nums[p2], nums[p1]
-#                 p1+=1
-#                 p2+=1
-
-        
-#         p = 0
-#         for i in range(len(nums)):
-#             if nums[i] != 0:
-#                 nums[p] = nums[i]
-#                 p = p+1
-#         for i in range(p,len(nums)):
-#             nums[i] = 0
-#         return nums
-        
             
             
             
