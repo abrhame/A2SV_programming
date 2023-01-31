@@ -22,7 +22,7 @@ class Solution:
             prev = slow
             slow = tmp
             
-        #check palidrome
+        #check palidrome using the first linked list and the new linked list until the new linked list end
         left, right = head, prev
         while right:
             if left.val != right.val:
