@@ -38,7 +38,13 @@ class Solution:
         
 #         return dummy.next
 
+# the above method is not correct becaus I thoght that the left and right are the values of the node, but instead they are the postions of the node
+
+
+        # in this method we have to use a dummy node, because the postion of the left node may start at the head
+
         #reach the node at postion "left"
+        #we use the leftPrev pointer to connect to the new linked list that will be formed
         dummy = ListNode(0,head)
         leftPrev, cur = dummy, head
         for i in range(left-1):
@@ -52,6 +58,8 @@ class Solution:
             prev, cur = cur, tmpNext
 
         # update pointers
+        # the leftPrev next.next contains the node at left postion
+        # make the next of the leftPrev to be the new linked list formed by revesing
         leftPrev.next.next = cur
         leftPrev.next = prev
         return dummy.next
