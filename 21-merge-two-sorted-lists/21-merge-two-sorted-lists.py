@@ -15,21 +15,16 @@ class Solution:
         while l1 and l2:
             if l1.val <= l2.val:
                 cur.next = l1
-                cur = l1
                 l1 = l1.next
             else:
                 cur.next = l2
-                cur = l2
                 l2 = l2.next
-        while l1:
-            cur.next = l1
-            cur = l1
-            l1 = l1.next
+            cur = cur.next
         
-        while l2:
+        if l1:
+            cur.next = l1
+        if l2:
             cur.next = l2
-            cur = l2
-            l2 = l2.next
         
         return dummy.next
             
