@@ -10,7 +10,7 @@ class Solution:
             
             cur = str(cur)
             seen.add(cur)
-            cur = sum(list(map(lambda x: int(x)*int(x), cur)))
+            cur = sum((map(lambda x: int(x)*int(x), cur)))
             
             
         
