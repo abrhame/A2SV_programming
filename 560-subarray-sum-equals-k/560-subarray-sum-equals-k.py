@@ -2,7 +2,7 @@ class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
         res = 0
         curSum = 0
-        prefixSums = { 0 : 1}
+        prefixSums = Counter([0])
         
         for n in nums:
             curSum += n
