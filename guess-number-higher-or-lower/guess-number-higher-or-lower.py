@@ -10,7 +10,7 @@ class Solution:
         left, right = 1, n
         
         while left <= right:
-            mid = (left + right)//2
+            mid = left + (right - left)//2
             pick_res = guess(mid)
             if pick_res == 1:
                 left = mid + 1
