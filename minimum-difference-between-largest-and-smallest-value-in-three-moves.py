@@ -2,11 +2,13 @@ class Solution:
     def minDifference(self, nums: List[int]) -> int:
         n = len(nums)
         nums.sort()
-        ans = float("inf")
+        smallest = nums[0]
+        move = 3
+        for i in range(n-1,-1,-1):
+            if move == 0:
+                break
+            if nums[i] != smallest:
+                nums[i] = smallest
+                move -= 1
         # print(nums)
-        if n <= 4:
-            return 0
-        
-        for i in range(4):
-            ans = min(ans,(nums[-1-i]-nums[3-i]))
-        return ans
+        return max(nums) - min(nums)
