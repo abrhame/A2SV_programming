@@ -1,0 +1,52 @@
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+#         tmp_nums1 = nums1[:m]  # copy the non zero elements of nums1
+               
+#         p1 = 0
+#         p2 = 0
+               
+#         for p in range(n + m):
+      
+#             if p2 >= n or (p1 < m and tmp_nums1[p1] <= nums2[p2]):
+#                 nums1[p] = tmp_nums1[p1] 
+#                 p1 += 1
+#             else:
+#                 nums1[p] = nums2[p2]
+#                 p2 += 1
+
+
+        p1 = m - 1
+        p2 = n - 1
+        p = n+m - 1
+        
+        while p2 >= 0 and p1 >= 0:
+            if nums1[p1] <= nums2[p2]:
+                nums1[p] = nums2[p2]
+                p -= 1
+                p2 -= 1
+            elif nums1[p1] > nums2[p2]:
+                nums1[p] = nums1[p1]
+                nums1[p1] = 0
+                p -= 1
+                p1 -= 1
+        
+        while p2 >= 0:
+            nums1[p] = nums2[p2]
+            p2 -= 1
+            p -= 1
+            
+        
+                
+                
+                
+            
+            
+                
+                
+
+    
+
+            
